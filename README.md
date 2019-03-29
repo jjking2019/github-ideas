@@ -1,5 +1,3 @@
-Backup_readme_Mar29.txt
-
 ![](images/GitHub-Mark-120px-plus.png)![](../common/images/O-SalesPartnerAcademy-rgb.png)
 
 ## Library for GitHub OSPA Discussion
