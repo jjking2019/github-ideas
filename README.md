@@ -1,4 +1,6 @@
-![](images/GitHub-Mark-120px-plus.png)![](images/O-SalesPartnerAcademy-rgb.png)
+Backup_readme_Mar29.txt
+
+![](images/GitHub-Mark-120px-plus.png)![](../common/images/O-SalesPartnerAcademy-rgb.png)
 
 ## Library for GitHub OSPA Discussion
 ### Objectives
@@ -19,8 +21,8 @@
     * db19c
     * exadata-cloud 
     * migration 
-  * oci
   * nosql 
+  * oci
   * security
  
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library.
@@ -73,12 +75,13 @@
    1. Developer will push to appropriate "Developer Repo" (e.g. ospa-lib-appdev)
    1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-3-4 cycle until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
-   1. Admin copies contents from "Developer Repo" into "Staging Repo" (we will script this); performs cursory check of file sizes and formatting
+   1. Admin synchronize from "Developer Repo" into "Staging Repo" through script or command line; performs cursory check of file sizes and formatting
       1. Admin runs script (in-house script, see menu below)
       1. Admin selects developer repository to update
       1. Changes are automatically committed to Staging repository
       
       ![](./images/script.png)
+      
       
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
    1. Admin __MERGEs__ from "Staging Repo" to "Production Repo" - lets Developer know of success/failure
