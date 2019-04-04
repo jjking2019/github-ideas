@@ -1,6 +1,6 @@
 # **BETA** Scripts to convert .docx to .md **BETA**
 
-### Ale is working on a couple of Python scripts
+### Ale is working on a couple of Python scripts - NOTE: Currently BETA!
 * One for Python 2  [converter_beta.py](https://raw.githubusercontent.com/jjking2019/ospa-github-ideas/master/files/converter_beta.py)
 * One for Python 3  [converter_py37.py](https://raw.githubusercontent.com/jjking2019/ospa-github-ideas/master/files/converter_py37.py)
 
