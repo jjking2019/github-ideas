@@ -1,8 +1,8 @@
 # **BETA** Scripts to convert .docx to .md **BETA**
 
 ### Ale is working on a couple of Python scripts
-* One for Python 2  [converter_beta.py](https://github.com/jjking2019/ospa-github-ideas/files/converter_beta.py)
-* One for Python 3  [converter_py37.py](https://github.com/jjking2019/ospa-github-ideas/files/converter_py37.py)
+* One for Python 2  [converter_beta.py](https://github.com/downloads/jjking2019/ospa-github-ideas/files/converter_beta.py)
+* One for Python 3  [converter_py37.py](https://github.com/downloads/jjking2019/ospa-github-ideas/files/converter_py37.py)
 
 ### How do I know which version of Python I have on my machine? (you might have both)
 
