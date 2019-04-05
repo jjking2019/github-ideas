@@ -10,13 +10,14 @@ import platform
 from Tkinter import *
 import tkMessageBox
 import fileinput
+import Tkinter, Tkconstants, tkFileDialog
 from urlparse import urlparse
 
 
 
 # Verify Local repository exists. Create target directory if doesn't
 
-def assure_path_exists():
+def assure_path_exists(entry1):
 
     git_repo = entry1.get().rsplit('/', 1)[0]
 
@@ -41,17 +42,17 @@ def assure_path_exists():
     return flag
 
 
-def convertDocx():
+def convertDocx(entry1, entry2, entry3):
     """
     Convert Docx2MD def. Calls path verification def and convert the document. If checkbox is selected, call def to
     push code to github
-
     """
+
     repo_name = entry1.get().rsplit('/', 1)[-1]
     doc_input = entry2.get()
-    doc_output = entry3.get()
+    doc_output = entry3
 
-    status_init = assure_path_exists()
+    status_init = assure_path_exists(entry1)
 
     if status_init != 1:
 
@@ -65,13 +66,13 @@ def convertDocx():
             try:
                 os.chdir(entry1.get())
             except:
-                tkMessageBox.showinfo("Error", "Invalid path or repository")
+                tkMessageBox.showinfo("Error", "Invalid Path or Repository")
 
         elif platform.system() == "win32" or platform.system() == "win64" or platform.system() == "Windows":
             try:
                 os.chdir(entry1.get())
             except:
-                tkMessageBox.showinfo("Error", "Invalid path or repository")
+                tkMessageBox.showinfo("Error", "Invalid Path or Repository")
 
         cmd = 'pandoc --extract-media . ' + doc_input + ' -t gfm -o ' + doc
         os.system(cmd)
@@ -86,16 +87,16 @@ def convertDocx():
                 try:
                     os.chdir(entry1.get())
                 except:
-                    tkMessageBox.showinfo("Error", "Invalid path or repository")
+                    tkMessageBox.showinfo("Error", "Invalid Path or Repository")
 
             elif platform.system() == "win32" or platform.system() == "win64" or platform.system() == "Windows":
                 try:
                     os.chdir(entry1.get())
                 except:
-                    tkMessageBox.showinfo("Error", "Invalid path or repository")
+                    tkMessageBox.showinfo("Error", "Invalid Path or Repository")
 
             if platform.system() == "Darwin":
-                exists = os.path.isfile(git_home_x + '/' + repo_name + '/' + '.DS_Store')
+                exists = os.path.isfile(repo_name + '/' + '.DS_Store')
                 if exists:
                     cmd = 'rm .DS_Store'
                     os.system(cmd)
@@ -138,7 +139,7 @@ def cloneRepo(url, path, user):
         patchGitConfig(url, path, user)
         tkMessageBox.showinfo("Information", "Github repository has been cloned")
     except OSError:
-        tkMessageBox.showinfo("Error", "Invalid path or repository")
+        tkMessageBox.showinfo("Error", "Invalid Path or repository")
 
 
 # Init repo def. Initiate Tk and calls cloneRepo def.
@@ -152,7 +153,7 @@ def initRepo():
 
     label_user = Label(initTK, text="GitHub User")
     label_url = Label(initTK, text="GitHub URL")
-    label_repo = Label(initTK, text="Local Repository Absolute path (Git container directory)")
+    label_repo = Label(initTK, text="Local Repository Absolute Path (Git container directory)")
 
     userid = Entry(initTK, textvariable=usrname)
     url = Entry(initTK, textvariable=repo_url)
@@ -187,7 +188,7 @@ def push(path):
         tkMessageBox.showinfo("Information", "Github repository has been updated")
 
     except OSError:
-        tkMessageBox.showinfo("Error", "Invalid path or repository")
+        tkMessageBox.showinfo("Error", "Invalid Path or repository")
 
 
 # PushToGit repo def. Initiate Tk and calls push def.
@@ -198,7 +199,7 @@ def pushToGit():
     repo = StringVar()
     path = Entry(gitTk, textvariable=repo)
 
-    label_repo = Label(gitTk, text="Local Repository Absolute path (Project directory included)")
+    label_repo = Label(gitTk, text="Local Repository Absolute Path (include project directory)")
     label_repo.grid(row=0)
 
     path.grid(row=0, column=1)
@@ -231,7 +232,7 @@ def pullFromGit():
     repo = StringVar()
     path = Entry(gitTk, textvariable=repo)
 
-    label_repo = Label(gitTk, text="Local Repository Absolute path (Project directory included)")
+    label_repo = Label(gitTk, text="Local Repository Absolute Path (include project directory)")
     label_repo.grid(row=0)
 
     path.grid(row=0, column=1)
@@ -242,8 +243,15 @@ def pullFromGit():
     button1.grid(row=1)
     button2.grid(row=1, column=1)
 
+def browse_file_button(file):
+    filename = tkFileDialog.askopenfilename()
+    file.set(filename)
+    print(filename)
 
-
+def browse_dir_button(folder):
+    filename = tkFileDialog.askdirectory()
+    folder.set(filename)
+    print(filename)
 
 
 ##### Root TK #####
@@ -269,31 +277,43 @@ subMenu3.add_command(label="Help", command=ospa_help)
 repo = StringVar()
 doc_input = StringVar()
 doc_output = StringVar()
+file_path = StringVar()
+folder_path = StringVar()
 checkBoxA = BooleanVar()
 
-label_repo = Label(root, text="Local Repository Absolute path (Project directory included)")
-label_docx = Label(root, text="Local Document Absolute path")
+label_repo = Label(root, text="Local Repository [Absolute path - include project directory)")
+label_file = Label(root, textvariable=file_path)
+label_folder = Label(root, textvariable=folder_path)
+label_docx = Label(root, text="Source Document [Absolute path]")
 label_ouput = Label(root, text="Name of MD document (Optional)")
-Checkbutton(root, text="Do you want to push changes to your respository", variable=checkBoxA).grid(row=4)
+Checkbutton(root, text="Push changes to dev respository", variable=checkBoxA).grid(row=5)
 
-entry1 = Entry(root, textvariable=doc_input)
-entry2 = Entry(root, textvariable=repo)
+#entry1 = Entry(root, textvariable=doc_input)
+#entry2 = Entry(root, textvariable=repo)
 entry3 = Entry(root, textvariable=doc_output)
 
 label_docx.grid(row=0)
-label_repo.grid(row=1)
-label_ouput.grid(row=2)
+label_file.grid(row = 1, column = 1)
+
+label_repo.grid(row=2)
+label_folder.grid(row = 3, column = 1)
+
+label_ouput.grid(row=4)
 
 
-entry1.grid(row=0, column=1)
-entry2.grid(row=1, column=1)
-entry3.grid(row=2, column=1)
+#entry1.grid(row=0, column=1)
+#entry2.grid(row=2, column=1)
+entry3.grid(row=4, column=1)
 
-button1 = Button(root, text="Enter", command=convertDocx)
-button2 = Button(root, text="Cancel", command=root.destroy)
+button1 = Button(root, text="Enter", command=lambda: convertDocx(folder_path, file_path, entry3.get()))
+button2 = Button(root, text="Exit", command=root.destroy)
+button3 = Button(root, text="Browse", command=lambda: browse_file_button(file_path))
+button4 = Button(root, text="Browse", command=lambda: browse_dir_button(folder_path))
 
-button1.grid(row=4, column=1)
-button2.grid(row=4, column=2)
+button4.grid(row=2, column=1)
+button3.grid(row=0, column=1)
+button1.grid(row=5, column=1)
+button2.grid(row=5, column=2)
 
 root.mainloop()
 
