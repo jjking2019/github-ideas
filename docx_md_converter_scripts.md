@@ -41,7 +41,7 @@
    C:\Users\gitrepos\AppDev
    /Users/gitrepos/AppDev
 
-  ![](images/PythonScriptFormFilled.png)
+  ![](images/PythonScriptFormFilled_v2.png)
 
 1. Click "Enter" to convert .docx file to .md in chosen repo; you should see the following when complete
 
