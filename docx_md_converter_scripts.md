@@ -27,7 +27,6 @@
   ![](images/PythonScriptForm.png)
 
 1. Fill in complete file path to docx file<br/>
-   (we're working on a version that lets you 'browse')
    
    PC
    (C:\Users\Manatee\Documents\mymswordfile.docx)
