@@ -281,7 +281,7 @@ file_path = StringVar()
 folder_path = StringVar()
 checkBoxA = BooleanVar()
 
-label_repo = Label(root, text="Local Repository [Absolute path - include project directory)")
+label_repo = Label(root, text="Local Developer Repository [Absolute path - include project directory)")
 label_file = Label(root, textvariable=file_path)
 label_folder = Label(root, textvariable=folder_path)
 label_docx = Label(root, text="Source Document [Absolute path]")
