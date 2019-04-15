@@ -34,11 +34,15 @@
    Mac
    (/Users/Manatee/Document/mymswordfile.docx)
 
-1. Fill in path for local git repo
+1. Fill in path for local git repo directory/folder
    (presumes you have 'cloned' Dev Repo)
 
-   C:\Users\gitrepos\AppDev
-   /Users/gitrepos/AppDev
+   C:\Users\gitrepos\appDev
+   /Users/gitrepos/appDev
+
+   You may change the name of the .md document created, defaults to .docx name
+  
+   "README" in example creates a "README.md" file (default GitHub display page)
 
   ![](images/PythonScriptFormFilled_v2.png)
 
@@ -48,7 +52,9 @@
 
 ### The original .docx file will now be found in your local repository converted to .md with all GitHub formatting
 
-* You still need to change all .tiff images to .png or .jpg that GitHub will recognize (batch tools work best)
-* You still need to modify the .md file to change the image suffixes from .tiff to .png or .jpg (whatever you created)
-* Now you are ready to clean-up the document as desired
+* Mac users only: 
+   * You still need to change all .tiff images to .png or .jpg that GitHub will recognize (batch tools work best)
+   * You still need to modify the .md file to change the image suffixes from .tiff to .png or .jpg (whatever you created)
+
+* Now you are ready to clean-up the document as desired, but, probably easiest to make changes in MS Word .docx file and repeat the process so that MS Word document is always accurate
 

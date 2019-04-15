@@ -31,14 +31,15 @@
   * .html (HTML5) files - [Optional] If developers want to wrap the content and make it available on a static web site
   * misc. SMALL lab files [Optional]
   * larger files will be **LINKED-to** not included in-line [Optional]
-* Developers will create and modify content then pass it to "Admins" to update in staging learning-library and ultimately production learning-library.
+* We are using Git "submodules" so that each folder's matching "Developer Repository" is available to developers without the need for them to deal with the "Staging Repository".
+* Developers will create and modify content in the "Developer Repository" along with their team members; when ready to move to "Staging Reposotiry" developers will ask "Admins" to update the "Staging Repository" and ultimately production learning-library.
 * Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo. 
 <br/>-- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP FORMATTING MAY NOT APPLY
 <br/>---- No need for "section header" and "title" images; keep images small and to the point if used at all
 <br/>---- These are lab guides; keep it simple and easy; link to complex explanations, videos, etc...
 
 * Developers will be responsible for CE and QA of their own material; peer review will be essential
-* Documents will be stored in appropriate folders in learning-library/ospa-library
+* Documents will be stored in "Developer Repositories" connected to the appropriate folders in learning-library/ospa-library
   * Developers might create entirely new documents
   * Developers might modify existing documents
 * We have added a 'common-content' folder (managed by the Admins) containing assets to be used when creating HTML files to provide a common 'wrapper'
@@ -51,29 +52,38 @@
 ![](images/VSCode.png)
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
-   1. Oracle Learning-Library (production)
-   1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
-   1. One 'Developer Repo' for each folder identified earlier
+   1. Oracle Learning-Library (production, https://github.com/oracle/learning-library)
+   1. OSPA Learning-Library (staging, one John's today  https://github.com/jjking2019/learning-library)
+   1. One 'Developer Repository' ('Developer Repo') for each folder identified earlier
+      1. analytics, appdev, appint, data-mgmt, oci, security, and github-ideas
+      1. data-mgmt will be by shared developers and have a folder for each of the sub-areas: adbcertificationlabs, adw, atp, big-data-service, db19c, exadata-cloud, migration, and nosql
       1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
       1. Developers will create, modify, and review documents in Developer Repos
       
    [Rationale behind three-level repository](threelevel.md)
 
-### Alternative Mechanism (not our favorite)
-* Two-level OSPA repository (repo) scheme
-   1. Oracle Learning-Library (production)
-   1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
-* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be shared using email, LCMS, or Slack (go-ospa-github). - WCGW? :pray:
-* Developer Github access is not required
+#
 
 ### Suggested Workflow(s)
-   1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins"
-   1. Developer creates (or gets from somewhere) desired content, makes sure it is in proper form (.md, .html), and that all large files are linked-to rather than part of document (we need to decide if links will be to Confluence, OraDocs, LCMS, etc...)</br>
-   __NOTE:__ We can supply a command to copy a relevant folder to a developer's machine
-   1. Developer will push to appropriate "Developer Repo" (e.g. ospa-lib-appdev)
-   1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-3-4 cycle until happy
+   1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins" who will create necessary folder and matching "Developer Repository" 
+   1. Developer creates local GitHub directory/folder structure and clones "Developer Repository" (appdev used as example below; change as appropriate)
+      1. mkdir github  **(you pick the folder name here)**
+      1. cd github **(your folder)**
+      1. git init
+      1. mkdir appdev
+      1. git clone https://jjking2019/appdev.git (copies Developer Repo locally)
+   1. Developer creates (or gets from somewhere) desired content using approved MS Word template
+   1. Developer runs supplied script to convert the .docx (MS Word) file into .md format (what GitHub needs)
+   1. Developer copies (any method) document and images folders into
+      local github folder created above
+   1. Developer makes sure document is in proper form (.md, .html), that images and formatting are as desired, and that all large files are linked-to rather than part of document (Confluence, OraDocs, LCMS, etc...)</br>
+   1. Developer will commit changes and push them to the appropriate "Developer Repo" (e.g. appdev) using desktop tool or command-line
+      1. git add .
+      1. git commit -m "some helpful comment goes here"
+      1. git push
+   1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-8 cycle until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
-   1. Admin synchronize from "Developer Repo" into "Staging Repo" through script or command line; performs cursory check of file sizes and formatting
+   1. Admin synchronize from "Developer Repo" into "Staging Repo" using script (with minimal review, CE/QA are developer team's responsibility)
       1. Admin runs script (in-house script, see menu below)
       1. Admin selects developer repository to update
       1. Changes are automatically committed to Staging repository
@@ -82,7 +92,7 @@
       
       
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
-   1. Admin __MERGEs__ from "Staging Repo" to "Production Repo" - lets Developer know of success/failure
+   1. Admin creates __PULL REQUEST__ asking oracle/learning-library admins to  __MERGE__ changes "Staging Repo" to "Production Repo"
    1. Developer performs final check of "Production Repo"
    
    

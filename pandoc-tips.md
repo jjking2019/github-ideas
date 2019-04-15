@@ -2,6 +2,7 @@
 
 ### Someone (I think Dan) found the "pandoc" tool online [http://pandoc.org](http://pandoc.org) and suggested it.
 
+### NOTE: You may continue with the manual process below, but we recommend that you use the Python "converter" script supplied [Converter Scripts](docx_md_converter_scripts.md)
 
 ### I found was able to convert .docx files to .md with limited fuss in a short time.
 
