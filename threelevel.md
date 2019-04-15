@@ -24,4 +24,4 @@
    1. Oracle Learning-Library (production)
    1. OSPA Learning-Library (staging)
 * Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be shared using email, LCMS, or Slack (go-ospa-github). - WCGW? :pray:
-* Developer Github access is not required
+* Developer GitHub access is not required

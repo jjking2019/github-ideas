@@ -58,7 +58,7 @@
       1. analytics, appdev, appint, data-mgmt, oci, security, and github-ideas
       <br/>(jjk2019/analytics, jjk2019/appdev, jjking2019/data-mgmt, etc.)
       1. data-mgmt will be by shared by developers and has a folder for each of the sub-areas: adbcertificationlabs, adw, atp, big-data-service, db19c, exadata-cloud, migration, and nosql - each developer with access to the data-mgmt Developer Repository must be careful not to accidentally modify topics they are not involved with
-      1. Developers will have full authority to Developer Repos <br/> **Note: Developers Github Access is required**
+      1. Developers will have full authority to Developer Repos <br/> **Note: Developers must have "generic, not-necessarily Oracle" GitHub accounts**
       1. Developers will create, modify, and review documents in Developer Repos
       
    [Rationale behind three-level repository](threelevel.md)

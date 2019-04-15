@@ -1,6 +1,6 @@
 # Create local repository to work with Developer Repository
 
-If you want to work on the repo using Git and Github from a local copy on your machine; you will need a folder to represent your clone/fork of the repository 
+If you want to work on the repo using Git and GitHub from a local copy on your machine; you will need a folder to represent your clone/fork of the repository 
 <br/>(these instructions assume you have successfully downloaded and installed git on the local machine)
 
 Steps to get a current copy of repo (ospa-github-ideas in this example)

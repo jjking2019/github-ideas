@@ -8,7 +8,7 @@ If you insist on doing things manually:
 [John's tips on create local repository cloned from Developer repository](dev-repo-local-version.md)
 
 
-### Useful Git and Github resources  -- [RETURN](README.md)
+### Useful Git and GitHub resources  -- [RETURN](README.md)
 
 * Intro to Git and GitHub for Beginners
 https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
@@ -22,7 +22,7 @@ https://www.markdownguide.org/cheat-sheet
 * Markdown Guide
 https://www.markdownguide.org
 
-* Github Emoji Cheatsheet
+* GitHub Emoji Cheatsheet
 https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 
 * Microsoft Visual Studio Code (in Oracle Desktop)
