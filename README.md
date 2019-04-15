@@ -32,7 +32,7 @@
   * misc. SMALL lab files [Optional]
   * larger files will be **LINKED-to** not included in-line [Optional]
 * We are using Git "submodules" so that each folder's matching "Developer Repository" is available to developers without the need for them to deal with the "Staging Repository".
-* Developers will create and modify content in the "Developer Repository" along with their team members; when ready to move to "Staging Reposotiry" developers will ask "Admins" to update the "Staging Repository" and ultimately production learning-library.
+* Developers will create and modify content in the "Developer Repository" along with their team members; when ready to move to "Staging Repository" developers will ask "Admins" to update the "Staging Repository" and ultimately production learning-library.
 * Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo. 
 <br/>-- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP FORMATTING MAY NOT APPLY
 <br/>---- No need for "section header" and "title" images; keep images small and to the point if used at all
@@ -53,11 +53,12 @@
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production, https://github.com/oracle/learning-library)
-   1. OSPA Learning-Library (staging, one John's today  https://github.com/jjking2019/learning-library)
-   1. One 'Developer Repository' ('Developer Repo') for each folder identified earlier
+   1. OSPA Learning-Library (staging, one of John's today  https://github.com/jjking2019/learning-library will transition to "OSPA-specific" GitHub account and replace "jjk2019" at some point in the future)
+   1. One 'Developer Repository' ('Developer Repo') for each folder identified earlier 
       1. analytics, appdev, appint, data-mgmt, oci, security, and github-ideas
-      1. data-mgmt will be by shared developers and have a folder for each of the sub-areas: adbcertificationlabs, adw, atp, big-data-service, db19c, exadata-cloud, migration, and nosql
-      1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
+      <br/>(jjk2019/analytics, jjk2019/appdev, jjking2019/data-mgmt, etc.)
+      1. data-mgmt will be by shared by developers and has a folder for each of the sub-areas: adbcertificationlabs, adw, atp, big-data-service, db19c, exadata-cloud, migration, and nosql - each developer with access to the data-mgmt Developer Repository must be careful not to accidentally modify topics they are not involved with
+      1. Developers will have full authority to Developer Repos <br/> **Note: Developers Github Access is required**
       1. Developers will create, modify, and review documents in Developer Repos
       
    [Rationale behind three-level repository](threelevel.md)
@@ -70,8 +71,7 @@
       1. mkdir github  **(you pick the folder name here)**
       1. cd github **(your folder)**
       1. git init
-      1. mkdir appdev
-      1. git clone https://jjking2019/appdev.git (copies Developer Repo locally)
+      1. git clone https://github.com/jjking2019/appdev.git (copies Developer Repo locally; will create local folder for appdev contents)
    1. Developer creates (or gets from somewhere) desired content using approved MS Word template
    1. Developer runs supplied script to convert the .docx (MS Word) file into .md format (what GitHub needs)
    1. Developer copies (any method) document and images folders into
@@ -81,12 +81,13 @@
       1. git add .
       1. git commit -m "some helpful comment goes here"
       1. git push
-   1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-8 cycle until happy
+   1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat #2-#8 cycle (above) until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
    1. Admin synchronize from "Developer Repo" into "Staging Repo" using script (with minimal review, CE/QA are developer team's responsibility)
       1. Admin runs script (in-house script, see menu below)
       1. Admin selects developer repository to update
       1. Changes are automatically committed to Staging repository
+      1. Admin lets developer know content is ready for testing
       
       ![](./images/script.png)
       
