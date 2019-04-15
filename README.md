@@ -1,6 +1,6 @@
 ![](images/GitHub-Mark-120px-plus.png)![](../common/images/O-SalesPartnerAcademy-rgb.png)
 
-## Library for GitHub OSPA Discussion - TEST2
+## Library for GitHub OSPA Discussion - TEST3
 ### Objectives
 * Agree to common method for creating OSPA Hands-On Lab documentation using GitHub.
 * Begin to develop standard methodology for OSPA teams.
