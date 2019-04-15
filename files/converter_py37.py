@@ -4,14 +4,16 @@
 ### For internal use only
 ### Beta 1
 
+
 import os
 import subprocess
 import platform
-from Tkinter import *
-import tkMessageBox
+from tkinter import *
+import tkinter.ttk as ttk
+import tkinter.messagebox as tkMessageBox
 import fileinput
-import Tkinter, Tkconstants, tkFileDialog
-from urlparse import urlparse
+import tkinter.filedialog as tkFileDialog
+import urllib.request as ur
 
 
 
@@ -33,7 +35,7 @@ def assure_path_exists(entry1):
     elif platform.system() == "win32" or platform.system() == "win64" or platform.system() == "Windows":
         if not os.path.exists(entry1.get()):
             MsgBox = tkMessageBox.askquestion("Error","Directory structure does not exist. Do you want to create the directory structure?")
-            print MsgBox
+            print (MsgBox)
             if MsgBox == 'yes':
                 os.makedirs(git_repo)
                 tkMessageBox.showinfo("Information", "Directory structure created. You must initiate your dev repository")
@@ -103,7 +105,8 @@ def convertDocx(entry1, entry2, entry3):
                 else:
                     pass
 
-            cmd = 'git pull && git add . && git commit -m "Update MD content" && git push origin master'
+            print (entry1.get())
+            cmd = 'git pull master && git add . && git commit -m "Update MD content" && git push origin master'
             os.system(cmd)
 
             tkMessageBox.showinfo("Information", "Content updated")
@@ -126,7 +129,7 @@ def patchGitConfig(url, path, user):
 
     for line in fileinput.FileInput(path + "/" + folder + "/.git/config", inplace=1):
         line = line.replace("github.com", user + "@github.com")
-        print line
+        print (line)
 
 
 # Def for clone repo shell command
@@ -281,7 +284,7 @@ file_path = StringVar()
 folder_path = StringVar()
 checkBoxA = BooleanVar()
 
-label_repo = Label(root, text="Local Repository [Absolute path - include project directory)")
+label_repo = Label(root, text="Local Developer Repository [Absolute path - include project directory)")
 label_file = Label(root, textvariable=file_path)
 label_folder = Label(root, textvariable=folder_path)
 label_docx = Label(root, text="Source Document [Absolute path]")
