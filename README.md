@@ -89,7 +89,7 @@
       1. Changes are automatically committed to Staging repository
       1. Admin lets developer know content is ready for testing
       
-      ![](./images/scriptGUI.png)
+      ![](./images/adminGUI.png)
       
       
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
