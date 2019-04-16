@@ -84,7 +84,7 @@
    1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat #2-#8 cycle (above) until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
    1. Admin synchronize from "Developer Repo" into "Staging Repo" using script (with minimal review, CE/QA are developer team's responsibility)
-      1. Admin runs script (in-house script, see menu below)
+      1. Admin runs script (in-house script, see picture below)
       1. Admin selects developer repository to update
       1. Changes are automatically committed to Staging repository
       1. Admin lets developer know content is ready for testing
