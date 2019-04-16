@@ -10,16 +10,16 @@ Steps to get a current copy of repo (ospa-github-ideas in this example)
 
 1. I created a folder for local repositories called 'gitrepos'
 
-    `__mkdir gitrepos__`       
+    `# mkdir gitrepos`       
     **(You pick the folder name, nothing magic about this one)**
 
 1. Change directory to folder created
 
-    __cd gitrepos__
+    `# cd gitrepos `
      
 1. Initialize the folder for git
 
-    __git init__
+    `# git init `
 
 1. Clone current folder 
    **(Using "github-ideas" as "Developer Repository" in this example)**
@@ -30,7 +30,7 @@ Steps to get a current copy of repo (ospa-github-ideas in this example)
 
   1. Issue following command using url from clipboard to "clone" the dev repo from the cloud and make a local copy on your machine (change to the desired "Developer Repository" name)
 
-     __git clone https://github.com/jjking2019/github-ideas.git__
+     `# git clone https://github.com/jjking2019/github-ideas.git `
 
     (should see messages something like this: 
        Cloning into 'github-ideas'...
