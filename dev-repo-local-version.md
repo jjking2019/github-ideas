@@ -10,7 +10,7 @@ Steps to get a current copy of repo (ospa-github-ideas in this example)
 
 1. I created a folder for local repositories called 'gitrepos'
 
-    __mkdir gitrepos__        
+    `__mkdir gitrepos__`       
     **(You pick the folder name, nothing magic about this one)**
 
 1. Change directory to folder created
