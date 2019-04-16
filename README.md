@@ -31,7 +31,11 @@
   * .html (HTML5) files - [Optional] If developers want to wrap the content and make it available on a static web site
   * misc. SMALL lab files [Optional]
   * larger files will be **LINKED-to** not included in-line [Optional]
-* We are using Git "submodules" so that each folder's matching "Developer Repository" is available to developers without the need for them to deal with the "Staging Repository".
+* We are using Git "submodules" so that each folder's matching "Developer Repository" is available to developers without the need for them to deal with the "Staging Repository". 
+
+   __This adds the current "pointer/address" to the entry that appears in the GitHub folder list online (see image below)__
+![](images/ReposWithSubmoduleAddresses.png)
+
 * Developers will create and modify content in the "Developer Repository" along with their team members; when ready to move to "Staging Repository" developers will ask "Admins" to update the "Staging Repository" and ultimately production learning-library.
 * Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo. 
 <br/>-- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP FORMATTING MAY NOT APPLY
