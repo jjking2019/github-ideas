@@ -1,4 +1,4 @@
-# **BETA** Scripts to convert .docx to .md **BETA**
+# **BETA** Scripts to convert .docx to .md **** [RETURN](README.md)
 
 ### Ale is working on a couple of Python scripts - NOTE: Currently BETA!
 * One for Python 2  [converter_beta.py](https://raw.githubusercontent.com/jjking2019/ospa-github-ideas/master/files/converter_beta.py)
@@ -20,8 +20,8 @@
 
  `python converter_beta.py`
 
- `python3 converter_py37.py` 
- *Note:This script has been refactored for Python 3.7. Please notify any issue running on a different python 3 release.*
+ `python3 converter_py37.py` <br/>
+ *Note:This script has been refactored for Python 3.7. Please notify admins of any issues running on a different python 3 release.*
 
  ### You will see a dialog that looks like this:
 
@@ -30,15 +30,18 @@
 1. Fill in complete file path to docx file (**Avoid using spaces on the file names**)<br/>
    
    PC
-   (C:\Users\Manatee\Documents\mymswordfile.docx)
+   C:\Users\Manatee\Documents\mymswordfile.docx
    
    Mac
-   (/Users/Manatee/Document/mymswordfile.docx)
+   /Users/Manatee/Document/mymswordfile.docx
 
 1. Fill in path for local git repo directory/folder
    (presumes you have 'cloned' Dev Repo)
 
+   PC
    C:\Users\gitrepos\appDev
+
+   Mac
    /Users/gitrepos/appDev
 
    You may change the name of the .md document created, defaults to .docx name
@@ -51,7 +54,7 @@
 
   ![](images/PythonScriptComplete.png)
 
-### The original .docx file will now be found in your local repository converted to .md with all GitHub formatting
+### The converted .docx file will now be found in your local repository converted to .md with all GitHub formatting
 
 * Mac users only: 
    * You still need to change all .tiff images to .png or .jpg that GitHub will recognize (batch tools work best)

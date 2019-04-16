@@ -1,4 +1,4 @@
-### Tips and Tricks
+### Tips and Tricks --- [RETURN](README.md)
 
 [Ale's .docx - .md conversion scripts (BETA)](docx_md_converter_scripts.md)
 

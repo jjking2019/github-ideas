@@ -1,4 +1,4 @@
-### Three-Level Rationale  -- [RETURN](README.md)
+### Three-Level Rationale  ---- [RETURN](README.md)
 
 * In GitHub (and Git) a "clone" or "fork" is of the entire repository; so, an OSPA clone of the Oracle learning-library contains everything in the 'master' repository
   * If someone makes changes to the clone or fork; those changes are made to the master when repositories are merged
