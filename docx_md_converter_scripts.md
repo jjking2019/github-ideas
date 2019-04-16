@@ -21,7 +21,7 @@
  `python converter_beta.py`
 
  `python3 converter_py37.py` 
- /This script has been refactored for Python 3.7. Please notify any issue running on a different python 3 release./
+ *Note:This script has been refactored for Python 3.7. Please notify any issue running on a different python 3 release.*
 
  ### You will see a dialog that looks like this:
 
