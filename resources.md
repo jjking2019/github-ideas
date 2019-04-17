@@ -1,5 +1,7 @@
 ### Tips and Tricks --- [RETURN](README.md)
 
+OSPA ClassOf [Simple MS Word Lab Guide Template](https://raw.githubusercontent.com/jjking2019/ospa-github-ideas/master/files/Simple_Lab_Template_for_GitHub_04_17.docx)
+
 [Ale's .docx - .md conversion scripts (BETA)](docx_md_converter_scripts.md)
 
 If you insist on doing things manually:
