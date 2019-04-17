@@ -78,9 +78,9 @@ def convertDocx(entry1, entry2, entry3):
         os.system(cmd)
 
         if checkBoxA.get() == True:
-            tkMessageBox.showinfo("Information", "Convertion complete. Uploading content")
+            tkMessageBox.showinfo("Information", "Conversion complete. Uploading content")
         else:
-            tkMessageBox.showinfo("Information", "Convertion complete.")
+            tkMessageBox.showinfo("Information", "Conversion complete.")
 
         if checkBoxA.get() == True:
             if platform.system() == "Linux" or platform.system() == "Linux2" or platform.system() == "Darwin":
