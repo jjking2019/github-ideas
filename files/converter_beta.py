@@ -137,7 +137,7 @@ def cloneRepo(url, path, user):
         cmd = 'git clone ' + url
         subprocess.call(cmd, shell=True)
         patchGitConfig(url, path, user)
-        tkMessageBox.showinfo("Information", "GitHub repository has been cloned")
+        tkMessageBox.showinfo("Information", "Github repository has been cloned")
     except OSError:
         tkMessageBox.showinfo("Error", "Invalid Path or repository")
 
@@ -183,9 +183,11 @@ def initRepo():
 def push(path):
     try:
         os.chdir(path)
-        cmd = 'git pull && git add . && git commit -m "Update to repository" && git push origin master'
+        cmd = "git pull"
+        os.system(cmd)
+        cmd = 'git add . && git commit -m "Update to repository" && git push -f origin master'
         subprocess.call(cmd, shell=True)
-        tkMessageBox.showinfo("Information", "GitHub repository has been updated")
+        tkMessageBox.showinfo("Information", "Github repository has been updated")
 
     except OSError:
         tkMessageBox.showinfo("Error", "Invalid Path or repository")
